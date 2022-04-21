@@ -183,17 +183,18 @@ public class Hotel implements Serializable {
 
                     //github
 
-    public Class<? extends Cliente> aceptadni(String dni){
+    public Object aceptadni(String dni){
 
         for (int i = 0; i < habitaciones.length; i++) {
             for (int j = 0; j < 7; j++) {
 
                 if(this.habitaciones[i][j].equals(dni)){
                     return this.habitaciones[i][j].getClass();
+                    
                 }
             }
         }
-        return null;
+        return false;
     }
 
 }
